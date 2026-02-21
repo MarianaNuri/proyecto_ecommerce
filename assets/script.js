@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let contador = 0;
     const botones = document.querySelectorAll(".agregar-carrito");
     const contadorElemento = document.getElementById("contadorCarrito");
-    const carritoIcono = document.getElementById("carritoIcono");
+    const carritoIcono = document.getElementById("iconoCarrito");
     botones.forEach(function (boton) {
         boton.addEventListener("click", function () {
             contador++;
