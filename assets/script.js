@@ -38,3 +38,20 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/*Carrito */
+let contador = 0;
+const botonesAgregar = document.querySelectorAll(".btn-agregar");
+const contadorElemento = document.getElementById("contadorCarrito");
+const iconoCarrito = document.getElementById("iconoCarrito");
+botonesAgregar.forEach(boton => {
+    boton.addEventListener("click", function() {
+        contador++;
+        contadorElemento.textContent = contador;
+        /*Sacudida*/
+        iconoCarrito.classList.add("shake");
+        setTimeout(() => {
+            iconoCarrito.classList.remove("shake");
+        }, 400);
+    });
+});
