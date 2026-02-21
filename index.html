@@ -75,47 +75,66 @@
 </section>
 
 <section class="container my-5">
-  <h2 class="text-center mb-4">Artículos destacados</h2>
+  <h2 class="text-center mb-4">Artículos Destacados</h2>
 
-  <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+  <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel" data-bs-interval="2500">
     <div class="carousel-inner">
 
-      <!-- SLIDE 1 -->
+      <!-- Slide 1 -->
       <div class="carousel-item active">
         <div class="row justify-content-center">
 
-          <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-              <img src="img/planta1.jpg" class="card-img-top" alt="Planta">
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="img/monstera.jpg" class="card-img-top">
               <div class="card-body text-center">
-                <h5 class="card-title">Monstera Deliciosa</h5>
-                <p class="text-success fw-bold">$350</p>
-                <button class="btn btn-success btn-agregar">Agregar</button>
-                <button class="btn btn-outline-secondary">Ver producto</button>
+                <h5>Monstera</h5>
+                <p>$350 MXN</p>
+                <button class="btn btn-success btn-sm agregar-carrito">Agregar</button>
+                <button class="btn btn-outline-dark btn-sm">Ver</button>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-              <img src="img/planta2.jpg" class="card-img-top" alt="Planta">
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="img/suculenta.jpg" class="card-img-top">
               <div class="card-body text-center">
-                <h5 class="card-title">Suculenta Jade</h5>
-                <p class="text-success fw-bold">$120</p>
-                <button class="btn btn-success btn-agregar">Agregar</button>
-                <button class="btn btn-outline-secondary">Ver producto</button>
+                <h5>Suculenta</h5>
+                <p>$120 MXN</p>
+                <button class="btn btn-success btn-sm agregar-carrito">Agregar</button>
+                <button class="btn btn-outline-dark btn-sm">Ver</button>
               </div>
             </div>
           </div>
 
-          <div class="col-md-4">
-            <div class="card shadow-sm h-100">
-              <img src="img/planta3.jpg" class="card-img-top" alt="Planta">
+        </div>
+      </div>
+
+      <!-- Slide 2 -->
+      <div class="carousel-item">
+        <div class="row justify-content-center">
+
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="img/maceta.jpg" class="card-img-top">
               <div class="card-body text-center">
-                <h5 class="card-title">Ficus Lyrata</h5>
-                <p class="text-success fw-bold">$480</p>
-                <button class="btn btn-success btn-agregar">Agregar</button>
-                <button class="btn btn-outline-secondary">Ver producto</button>
+                <h5>Maceta Decorativa</h5>
+                <p>$220 MXN</p>
+                <button class="btn btn-success btn-sm agregar-carrito">Agregar</button>
+                <button class="btn btn-outline-dark btn-sm">Ver</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-3">
+            <div class="card shadow">
+              <img src="img/kit.jpg" class="card-img-top">
+              <div class="card-body text-center">
+                <h5>Kit Jardinería</h5>
+                <p>$480 MXN</p>
+                <button class="btn btn-success btn-sm agregar-carrito">Agregar</button>
+                <button class="btn btn-outline-dark btn-sm">Ver</button>
               </div>
             </div>
           </div>
@@ -124,15 +143,6 @@
       </div>
 
     </div>
-
-    <!-- Controles -->
-    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
-      <span class="carousel-control-prev-icon"></span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
-      <span class="carousel-control-next-icon"></span>
-    </button>
-
   </div>
 </section>
 
