@@ -34,7 +34,15 @@
           <li><a href="index.html" class="nav-link px-3 text-dark">Inicio</a></li>
           <li><a href="quienes.html" class="nav-link px-3 text-dark">Quiénes somos</a></li>
           <li><a href="catalogo.html" class="nav-link px-3 text-dark">Catálogo</a></li>
-          <li class="nav-item"> <a class="nav-link text-dark" href="carrito.html"> <i class="bi bi-cart "></i> </a></li>
+          <li class="nav-item">
+  <a class="nav-link text-dark position-relative" href="carrito.html">
+    <i id="iconoCarrito" class="bi bi-cart fs-5"></i>
+    <span id="contadorCarrito"
+          class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-success">
+      0
+    </span>
+  </a>
+</li>
         </ul>
       </nav>
 
@@ -67,14 +75,65 @@
 </section>
 
 <section class="container my-5">
-    <h2 class="text-center mb-4">Nuestras categorías</h2>
+  <h2 class="text-center mb-4">Artículos destacados</h2>
 
-    <ul class="list-group list-group-flush text-center">
-        <li class="list-group-item">Plantas de interior</li>
-        <li class="list-group-item">Suculentas</li>
-        <li class="list-group-item">Macetas decorativas</li>
-        <li class="list-group-item">Kits de jardinería</li>
-    </ul>
+  <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+
+      <!-- SLIDE 1 -->
+      <div class="carousel-item active">
+        <div class="row justify-content-center">
+
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <img src="img/planta1.jpg" class="card-img-top" alt="Planta">
+              <div class="card-body text-center">
+                <h5 class="card-title">Monstera Deliciosa</h5>
+                <p class="text-success fw-bold">$350</p>
+                <button class="btn btn-success btn-agregar">Agregar</button>
+                <button class="btn btn-outline-secondary">Ver producto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <img src="img/planta2.jpg" class="card-img-top" alt="Planta">
+              <div class="card-body text-center">
+                <h5 class="card-title">Suculenta Jade</h5>
+                <p class="text-success fw-bold">$120</p>
+                <button class="btn btn-success btn-agregar">Agregar</button>
+                <button class="btn btn-outline-secondary">Ver producto</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="card shadow-sm h-100">
+              <img src="img/planta3.jpg" class="card-img-top" alt="Planta">
+              <div class="card-body text-center">
+                <h5 class="card-title">Ficus Lyrata</h5>
+                <p class="text-success fw-bold">$480</p>
+                <button class="btn btn-success btn-agregar">Agregar</button>
+                <button class="btn btn-outline-secondary">Ver producto</button>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Controles -->
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+
+  </div>
 </section>
 
 <section class="container my-5">
