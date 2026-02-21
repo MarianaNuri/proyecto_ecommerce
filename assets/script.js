@@ -19,13 +19,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*funcion para los terminos y condiciones*/
 document.addEventListener("DOMContentLoaded", function() {
-    /* para que ya no vuelva a aparecer si refresca*/
-    if (!localStorage.getItem("terminosAceptados")) {
-        const modal = new bootstrap.Modal(document.getElementById("modalTerminos"));
-        modal.show();
+    const modalElement = document.getElementById("modalTerminos");
+    /*Para que ya no aparezca de nuevo en un navegador si ya acepto*/
+    if (!localStorage.getItem("terminosAceptados") && modalElement) {
+        const modal = new bootstrap.Modal(modalElement);
+        /* para que aparezca despues de unos segundos */
+        setTimeout(function() {
+            modal.show();
+        }, 4000); // 4000 ms = 4 segundos
         const checkbox = document.getElementById("aceptarTerminos");
         const boton = document.getElementById("btnAceptar");
-
         checkbox.addEventListener("change", function() {
             boton.disabled = !checkbox.checked;
         });
@@ -33,7 +36,5 @@ document.addEventListener("DOMContentLoaded", function() {
             localStorage.setItem("terminosAceptados", "true");
             modal.hide();
         });
-
     }
-
 });
