@@ -40,18 +40,19 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 /*Carrito */
-let contador = 0;
-const botonesAgregar = document.querySelectorAll(".btn-agregar");
-const contadorElemento = document.getElementById("contadorCarrito");
-const iconoCarrito = document.getElementById("iconoCarrito");
-botonesAgregar.forEach(boton => {
-    boton.addEventListener("click", function() {
-        contador++;
-        contadorElemento.textContent = contador;
-        /*Sacudida*/
-        iconoCarrito.classList.add("shake");
-        setTimeout(() => {
-            iconoCarrito.classList.remove("shake");
-        }, 400);
+document.addEventListener("DOMContentLoaded", function () {
+    let contador = 0;
+    const botones = document.querySelectorAll(".agregar-carrito");
+    const contadorElemento = document.getElementById("contadorCarrito");
+    const carritoIcono = document.getElementById("carritoIcono");
+    botones.forEach(function (boton) {
+        boton.addEventListener("click", function () {
+            contador++;
+            contadorElemento.textContent = contador;
+            carritoIcono.classList.add("shake");
+            setTimeout(function () {
+                carritoIcono.classList.remove("shake");
+            }, 400);
+        });
     });
 });
