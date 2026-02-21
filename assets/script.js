@@ -97,7 +97,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const input = document.getElementById("inputBusqueda")
     const titulo = document.getElementById("tituloBusqueda")
 
-    if (busqueda){
+    if (busqueda && busqueda.trim() !== ""){
         //mostra la palabra en el input
         if (input) {
             input.value = busqueda;
@@ -107,6 +107,8 @@ document.addEventListener("DOMContentLoaded", function () {
             titulo.textContent = `Resultados de busqueda de "${busqueda}"`;
         }
         if (contenedor) {
+            contenedor.innerHTML = "";
+            
             const filtrados = productos.filter(producto =>
                 producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
             );
