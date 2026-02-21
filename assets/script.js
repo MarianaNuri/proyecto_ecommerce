@@ -95,10 +95,10 @@ document.addEventListener("DOMContentLoaded", function () {
 /*Busqueda de productos*/
 document.addEventListener("DOMContentLoaded", function () {
     const productos = [
-        { nombre: "Suculenta", precio: 120, imagen: "imagenes/suculenta.jpg" },
+        { nombre: "Suculenta", precio: 120, imagen: "imagenes/suculenta.webp" },
         { nombre: "Monstera", precio: 250, imagen: "imagenes/monstera.jpg" },
         { nombre: "Cactus", precio: 90, imagen: "imagenes/cactus.jpg" },
-        { nombre: "Helecho", precio: 180, imagen: "imagenes/helecho.jpg" }
+        { nombre: "Helecho", precio: 180, imagen: "imagenes/helecho.webp" }
     ];
     const params = new URLSearchParams(window.location.search);
     const busqueda = params.get("q");
@@ -118,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
         if (contenedor) {
             contenedor.innerHTML = "";
-            
+
             const filtrados = productos.filter(producto =>
                 producto.nombre.toLowerCase().includes(busqueda.toLowerCase())
             );
