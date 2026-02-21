@@ -11,4 +11,28 @@ body {
     background-position: center;
 }
 
+/* Hero 2*/
+.hero-secundario {
+    height: 60vh;
+    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
+    url('../img/plantas-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Animación suave para mostrar texto */
+.oculto {
+    display: none;
+    transition: all 0.4s ease-in-out;
+}
+
+/* Hover tarjetas */
+.valor-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.valor-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
 
