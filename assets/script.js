@@ -41,14 +41,24 @@ document.addEventListener("DOMContentLoaded", function() {
 
 /*Carrito */
 document.addEventListener("DOMContentLoaded", function () {
-    let contador = 0;
     const botones = document.querySelectorAll(".agregar-carrito");
     const contadorElemento = document.getElementById("contadorCarrito");
     const carritoIcono = document.getElementById("iconoCarrito");
+    /*Obtener valor guardado*/
+    let contador = localStorage.getItem("carritoCantidad");
+    if (contador === null) {
+        contador = 0;
+    } else {
+        contador = parseInt(contador);
+    }
+    contadorElemento.textContent = contador;
     botones.forEach(function (boton) {
         boton.addEventListener("click", function () {
             contador++;
             contadorElemento.textContent = contador;
+            /*Guardar en localStorage para qye se mantenga entre paginas*/
+            localStorage.setItem("carritoCantidad", contador);
+            /*Animación*/
             carritoIcono.classList.add("shake");
             setTimeout(function () {
                 carritoIcono.classList.remove("shake");
