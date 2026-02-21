@@ -39,11 +39,22 @@ body {
 
 /* Hero 2*/
 .hero-secundario {
-    height: 60vh;
-    background: linear-gradient(rgba(255,255,255,0.8), rgba(255,255,255,0.8)),
-    url('../img/plantas-banner.jpg');
-    background-size: cover;
-    background-position: center;
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    padding-top: 120px; 
+    background:
+        linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
+        url('../imagen/historia.jpg') center/cover no-repeat;
+
+    color: white;
+}
+
+.hero-secundario h1,
+.hero-secundario p {
+    opacity: 0;
+    animation: fadeUp 1.5s ease forwards;
 }
 
 /* Animación suave para mostrar texto */
