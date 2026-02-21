@@ -16,3 +16,24 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 });
+
+/*funcion para los terminos y condiciones*/
+document.addEventListener("DOMContentLoaded", function() {
+    /* para que ya no vuelva a aparecer si refresca*/
+    if (!localStorage.getItem("terminosAceptados")) {
+        const modal = new bootstrap.Modal(document.getElementById("modalTerminos"));
+        modal.show();
+        const checkbox = document.getElementById("aceptarTerminos");
+        const boton = document.getElementById("btnAceptar");
+
+        checkbox.addEventListener("change", function() {
+            boton.disabled = !checkbox.checked;
+        });
+        boton.addEventListener("click", function() {
+            localStorage.setItem("terminosAceptados", "true");
+            modal.hide();
+        });
+
+    }
+
+});
