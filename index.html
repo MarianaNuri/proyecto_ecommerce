@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>VerdeVida - Plantas que transforman espacios</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+<header class="p-3 bg-white shadow-sm">
+  <div class="container">
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-between">
+
+      <!-- Logo -->
+      <a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none">
+         <img src="img/logo.png" alt="Logo VerdeVida" width="40" height="40"> <!--este es opcional, se puede quedar solo con el nombre de la tienda-->
+         <span class="fs-4 fw-semibold text-success"> VerdeVida</span> 
+       
+      </a>
+
+      <!-- Menu UL LI -->
+      <nav>
+        <ul class="nav col-12 col-lg-auto mb-2 justify-content-center mb-md-0">
+          <li><a href="index.html" class="nav-link px-3 text-dark">Inicio</a></li>
+          <li><a href="registro.html" class="nav-link px-3 text-dark">Registro</a></li>
+          <li><a href="quienes.html" class="nav-link px-3 text-dark">Quiénes somos</a></li>
+          <li><a href="catalogo.html" class="nav-link px-3 text-dark">Catálogo</a></li>
+          <li class="nav-item"> <a class="nav-link text-dark" href="carrito.html"> <i class="bi bi-cart "></i> </a></li>
+        </ul>
+      </nav>
+
+      <!-- Buscador -->
+      <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input type="search" 
+               class="form-control" 
+               placeholder="Buscar plantas..." 
+               aria-label="Search">
+      </form>
+
+      <!-- Botones -->
+      <div class="text-end">
+        <a href="registro.html" class="btn btn-outline-success me-2">Iniciar sesión</a>
+        <a href="registro.html" class="btn btn-success">Crear cuenta</a>
+      </div>
+
+    </div>
+</header>
+
+
+
+
+<main>
+
+<section id="hero" class="d-flex align-items-center text-center">
+    <div class="container">
+        <h1 class="display-4 fw-light">Plantas que llenan tu hogar de vida</h1>
+        <p class="lead">Naturaleza, armonía y diseño en un solo lugar.</p>
+        <p id="mensaje" class="fw-semibold text-success"></p>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center mb-4">Nuestras categorías</h2>
+
+    <ul class="list-group list-group-flush text-center">
+        <li class="list-group-item">Plantas de interior</li>
+        <li class="list-group-item">Suculentas</li>
+        <li class="list-group-item">Macetas decorativas</li>
+        <li class="list-group-item">Kits de jardinería</li>
+    </ul>
+</section>
+
+<section class="container my-5">
+    <div class="row text-center">
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3">
+                <h5>Envío seguro</h5>
+                <p>Cuidamos cada planta hasta tu puerta.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3">
+                <h5>Calidad premium</h5>
+                <p>Seleccionamos las mejores especies.</p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="card border-0 shadow-sm p-3">
+                <h5>Compra sencilla</h5>
+                <p>Experiencia rápida y minimalista.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>

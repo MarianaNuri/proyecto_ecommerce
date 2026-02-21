@@ -1,0 +1,14 @@
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f8f9f6;
+}
+
+#hero {
+    height: 85vh;
+    background: linear-gradient(rgba(255,255,255,0.7), rgba(255,255,255,0.7)),
+    url('../img/plantas-banner.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
