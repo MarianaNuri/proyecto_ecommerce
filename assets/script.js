@@ -201,3 +201,25 @@ if (formularioBusqueda) {
 }
 
 });
+/* ============================
+   AGREGAR AL CARRITO (DEMO)
+============================ */
+
+const botonesAgregar = document.querySelectorAll(".agregar-carrito");
+
+if (botonesAgregar.length > 0) {
+
+    botonesAgregar.forEach(boton => {
+        boton.addEventListener("click", () => {
+
+            const mensaje = document.getElementById("mensajeCarrito");
+
+            mensaje.classList.remove("d-none");
+
+            setTimeout(() => {
+                mensaje.classList.add("d-none");
+            }, 2000);
+        });
+    });
+
+}
