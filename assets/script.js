@@ -142,5 +142,62 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     }
+    /* ============================
+   CARRITO DE COMPRA
+============================ */
+
+const cantidades = document.querySelectorAll(".cantidad");
+
+if (cantidades.length > 0) {
+
+    function calcularTotal() {
+        let total = 0;
+
+        const filas = document.querySelectorAll("#tabla-carrito tbody tr");
+
+        filas.forEach(fila => {
+            const precio = parseFloat(fila.querySelector(".precio").textContent);
+            const cantidad = parseInt(fila.querySelector(".cantidad").value);
+
+            const subtotal = precio * cantidad;
+            fila.querySelector(".subtotal").textContent = subtotal;
+
+            total += subtotal;
+        });
+
+        document.getElementById("total").textContent = total;
+    }
+
+    cantidades.forEach(input => {
+        input.addEventListener("input", calcularTotal);
+    });
+}
+
+
+/* ============================
+   BUSQUEDA DE PRODUCTOS
+============================ */
+
+const formularioBusqueda = document.getElementById("form-busqueda");
+
+if (formularioBusqueda) {
+
+    formularioBusqueda.addEventListener("submit", function(e) {
+        e.preventDefault();
+
+        const texto = document.getElementById("buscar").value;
+        const resultados = document.getElementById("resultados");
+
+        resultados.innerHTML = `
+            <p>Resultados para la búsqueda de <strong>${texto}</strong></p>
+
+            <ul>
+                <li>Planta tropical</li>
+                <li>Maceta moderna</li>
+                <li>Kit de jardinería</li>
+            </ul>
+        `;
+    });
+}
 
 });
