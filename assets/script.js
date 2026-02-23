@@ -81,12 +81,21 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         form.addEventListener("submit", function (event) {
+            event.preventDefault();
+
             if (!form.checkValidity()) {
-                event.preventDefault();
                 mensajeError.textContent = "Complete todos los campos correctamente";
             } else {
                 mensajeError.textContent = "";
-                alert("Registro exitoso");
+                const nombreUsuario = document.getElementById("nombre").value;
+                const mensajeBienvenida = document.getElementById("mensajeBienvenida");
+
+                mensajeBienvenida.textContent = `Bienvenida, ${nombreUsuario}. Gracias pr registrarse en VerdeVida`;
+                const modal = new bootstrap.Modal(document.getElementById("modalRegistro"));
+                modal.show();
+
+                form.reset();
+                btnEnviar.disabled = true;  
             }
         });
     }
