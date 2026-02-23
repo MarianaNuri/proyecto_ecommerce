@@ -105,9 +105,13 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function () {
     const productos = [
         { nombre: "Suculenta", precio: 120, imagen: "imagenes/suculenta.webp" },
+        { nombre: "Suculenta", precio: 78, imagen: "imagenes/suculenta.jpg" },
         { nombre: "Monstera", precio: 250, imagen: "imagenes/monstera.jpg" },
         { nombre: "Cactus", precio: 90, imagen: "imagenes/cactus.jpg" },
-        { nombre: "Helecho", precio: 180, imagen: "imagenes/helecho.webp" }
+        { nombre: "Set de Cactus", precio: 380, imagen: "imagenes/cactus.webp"},
+        { nombre: "Cactus Biznaga", precio: 99, imagen: "imagenes/biznagas.jpg"},
+        { nombre: "Helecho", precio: 180, imagen: "imagenes/helecho.webp" },
+        { nombre: "Helecho", precio: 750, imagen: "imagenes/helechos.webp" }
     ];
     const params = new URLSearchParams(window.location.search);
     const busqueda = params.get("q");
